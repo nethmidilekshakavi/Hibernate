@@ -23,23 +23,22 @@ public class Main {
         Student student=new Student();
 
         student.setId("2");
-        student.setName("nishan");
-        student.setAddress("kalutara");
+        student.setName("Seetha");
+        student.setAddress("Gampaha");
 
      /* save*/
         session.save(student);
 
-        /*update*/
+     /*   update*/
        session.update(student);
 
        /*delete*/
         session.delete(student);
 
 
-        /*get*/
+      /*  get*/
         List<Student> students = session.createQuery("from Stu ", Student.class).getResultList();
         System.out.println(students.size());
-
 
         /*------------------------Teacher-------------------------------------------------*/
 
@@ -49,19 +48,23 @@ public class Main {
         teacher.setName("kamal");
         teacher.setAddress("Galle");
 
-       /* save*/
+/* save*/
+
         session.save(teacher);
 
 
-        /*update*/
+/*update*/
+
         session.update(teacher);
 
-        /*delete*/
+/*  delete*/
+
         session.delete(teacher);
 
 
 
-        /*get*/
+/*get*/
+
         List<Teacher> teachers = session.createQuery("from tea ", Teacher.class).getResultList();
         System.out.println(teachers.size());
 
